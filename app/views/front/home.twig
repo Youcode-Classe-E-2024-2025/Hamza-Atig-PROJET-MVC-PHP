@@ -4,20 +4,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Mon Site{% endblock %}</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/assets/style.css">
 </head>
-<body>
-    <header>
-        <h1>Bienvenue sur mon site</h1>
+<body class="bg-gray-100 font-sans text-gray-900">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-md py-4 px-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-indigo-600">Bienvenue sur mon site</h1>
+            <nav class="flex items-center space-x-6">
+                <!-- Enhanced Menu Items with Dropdowns -->
+                <a href="#" class="text-gray-700 hover:text-indigo-600 transition duration-300 flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                    </svg>
+                    Accueil
+                </a>
+                <a href="#" class="text-gray-700 hover:text-indigo-600 transition duration-300 flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                    </svg>
+                    Profil
+                </a>
+                <div class="relative">
+                    <button class="text-gray-700 hover:text-indigo-600 flex items-center space-x-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                        </svg>
+                        Services
+                    </button>
+                    <div class="absolute hidden text-gray-700 bg-white shadow-md rounded-md py-2 w-48 mt-1 group-hover:block">
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Web Design</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Développement</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Marketing</a>
+                    </div>
+                </div>
+                <a href="#" class="text-white bg-indigo-600 hover:bg-indigo-700 py-2 px-4 rounded-md flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+                    </svg>
+                    S'inscrire
+                </a>
+                <a href="#" class="text-indigo-600 border border-indigo-600 hover:bg-indigo-600 hover:text-white py-2 px-4 rounded-md flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
+                    </svg>
+                    Se connecter
+                </a>
+            </nav>
+        </div>
     </header>
-    
-    <main>
-        {% block content %}{% endblock %}
+
+    <!-- Default Section -->
+    <section class="py-10">
+        <div class="container mx-auto">
+            <div class="bg-white shadow-md rounded-lg p-6">
+                <h2 class="text-xl font-semibold mb-4">Bienvenue !</h2>
+                <p class="text-gray-700">Ceci est une section par défaut de votre site. Vous pouvez personnaliser ce contenu selon vos besoins.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Block with Additional Features -->
+    <main class="py-6">
+        <div class="container mx-auto">
+            <div class="bg-white shadow-md rounded-lg p-6 mb-6">
+                <h2 class="text-2xl font-semibold mb-4">À propos de notre site</h2>
+                <p class="text-gray-700">Notre site propose des services exceptionnels pour répondre à vos besoins numériques, allant du développement web à la création de solutions marketing.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white shadow-md rounded-lg p-6">
+                    <h3 class="text-xl font-semibold mb-4">Nos Services</h3>
+                    <ul class="list-disc pl-6 text-gray-700">
+                        <li>Développement Web sur mesure</li>
+                        <li>Création d'Identité Visuelle</li>
+                        <li>Marketing Digital</li>
+                        <li>Solutions sur mesure</li>
+                    </ul>
+                </div>
+                <div class="bg-white shadow-md rounded-lg p-6">
+                    <h3 class="text-xl font-semibold mb-4">Contactez-nous</h3>
+                    <form action="#" method="POST">
+                        <label for="name" class="block text-gray-700 mb-2">Nom</label>
+                        <input type="text" id="name" name="name" class="w-full p-3 mb-4 border border-gray-300 rounded-md" required>
+                        
+                        <label for="email" class="block text-gray-700 mb-2">Email</label>
+                        <input type="email" id="email" name="email" class="w-full p-3 mb-4 border border-gray-300 rounded-md" required>
+                        
+                        <button type="submit" class="w-full bg-indigo-600 text-white py-3 rounded-md hover:bg-indigo-700">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </main>
 
-    <footer>
-        <p>&copy; 2025 - Mon Site</p>
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 - Mon Site</p>
+        </div>
     </footer>
+
 </body>
 </html>
-
