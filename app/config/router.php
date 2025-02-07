@@ -8,6 +8,7 @@ return [
         '/admin' => ['Back\DashboardController', 'index'],
         '/signup' => ['Front\HomeController', 'signup'],
         '/login' => ['Front\HomeController', 'login'],
+        '/home' => ['Front\HomeController', 'home'],
         '/admin/users' => ['Back\UserController', 'index'],
         '/admin/users/edit/:id' => ['Back\UserController', 'edit'],
         '/admin/users/delete/:id' => ['Back\UserController', 'delete'],
@@ -16,5 +17,6 @@ return [
         '/admin/users/create' => ['Back\UserController', 'create'],
         '/admin/users/edit/:id' => ['Back\UserController', 'edit'],
         '/create' => ['Back\UserController', 'create'],
+        '/verif' => ['Front\ArticleController', 'verif'],
     ]
 ];

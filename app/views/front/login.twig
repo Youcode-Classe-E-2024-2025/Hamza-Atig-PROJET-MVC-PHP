@@ -69,7 +69,7 @@
 <body class="flex items-center justify-center min-h-screen">
   <div class="login-card">
     <h2 class="heading">{{ heading|default('Login to Your Account') }}</h2>
-    <form action="{{ form_action|default('#') }}" method="POST">
+    <form action="{{ form_action|default('/verif') }}" method="POST">
       <label class="block text-gray-700">{{ labels.email|default('Email Address') }}</label>
       <input type="email" name="email" class="form-input" placeholder="{{ placeholders.email|default('youremail@domain.com') }}" required />
 

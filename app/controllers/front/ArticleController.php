@@ -1,7 +1,9 @@
 <?php 
+namespace App\Controllers\Front;
 
 use App\Core\Controller; 
 use App\Core\View;
+use App\Core\Database;
 
 class ArticleController extends Controller{
     public function show($id){

@@ -1,4 +1,5 @@
 <?php 
+namespace App\Core;
 
 class Security{
     public static function sanitize($data){
