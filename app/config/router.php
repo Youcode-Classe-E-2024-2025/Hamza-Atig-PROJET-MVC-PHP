@@ -4,7 +4,7 @@
 return [
     'GET' => [
         '/' => ['Front\HomeController', 'index'],
-        '/article/:id' => ['Front\ArticleController', 'show'],
+        '/article' => ['Front\HomeController', 'verif'],
         '/admin' => ['Back\DashboardController', 'index'],
         '/signup' => ['Front\HomeController', 'signup'],
         '/login' => ['Front\HomeController', 'login'],
@@ -17,6 +17,5 @@ return [
         '/admin/users/create' => ['Back\UserController', 'create'],
         '/admin/users/edit/:id' => ['Back\UserController', 'edit'],
         '/create' => ['Back\UserController', 'create'],
-        '/verif' => ['Front\ArticleController', 'verif'],
     ]
 ];

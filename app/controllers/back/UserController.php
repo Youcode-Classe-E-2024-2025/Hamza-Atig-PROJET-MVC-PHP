@@ -27,4 +27,8 @@ class UserController extends Controller{
 
         View::render('front/signup.twig');
     }
+
+    public function verif(){
+            header("Location: /article/1");
+    }
 }

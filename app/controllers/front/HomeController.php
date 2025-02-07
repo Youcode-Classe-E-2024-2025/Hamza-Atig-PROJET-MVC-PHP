@@ -19,4 +19,8 @@ class HomeController extends Controller {
     public function home() {
         View::render('front/home.twig', ['message' => 'Bienvenue sur la page d\'accueil!']);
     }
+
+    public function verif(){
+        View::render('front/Article.twig', ['message' => 'Bienvenue sur la page d\'accueil!']);
+    }
 }
