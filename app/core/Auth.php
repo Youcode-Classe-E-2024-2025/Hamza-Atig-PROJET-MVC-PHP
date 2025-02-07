@@ -1,5 +1,7 @@
 <?php
+namespace App\Core;
 
+use App\Core\Database;
 class Auth{
     public static function login($email , $password){
         $db = Database::getConnection();

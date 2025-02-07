@@ -1,9 +1,7 @@
 <?php 
 
-
-
 use App\Core\Controller; 
-use App\Core\View; // Assurez-vous que View est bien dans App\Core
+use App\Core\View;
 
 class ArticleController extends Controller{
     public function show($id){

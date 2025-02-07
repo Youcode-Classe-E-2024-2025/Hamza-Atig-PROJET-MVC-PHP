@@ -69,7 +69,7 @@
 <body class="flex items-center justify-center min-h-screen">
   <div class="signup-card">
     <h2 class="heading">{{ heading|default('Create Your Account') }}</h2>
-    <form action="{{ form_action|default('#') }}" method="POST">
+    <form action="{{ form_action|default('/create') }}" method="POST">
       <label class="block text-gray-700">{{ labels.full_name|default('Full Name') }}</label>
       <input type="text" name="full_name" class="form-input" placeholder="{{ placeholders.full_name|default('John Doe') }}" required />
 

@@ -1,8 +1,9 @@
 <?php 
-
+namespace App\Controllers\Back;
 
 use App\Core\Controller; 
 use App\Core\View; 
+use App\Models\User;
 
 class UserController extends Controller{
     public function index(){
@@ -14,22 +15,16 @@ class UserController extends Controller{
 
     public function create(){
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
-            $name = $_POST['name'];
+            $name = $_POST['full_name'];
             $email = $_POST['email'];
             $password = $_POST['password'];
 
             $userModel = new User();
             $userModel->createUser($name , $email , $password);
 
-            header("Location:  /admin/users");
+            header("Location:  /login");
         }
 
-        View::render('back/create_user.twig');
-    }
-
-    public function delete($id){
-        $userModel = new User();
-        $userModel->deleteUser($id);
-        header("Location: /admin/users");
+        View::render('front/signup.twig');
     }
 }

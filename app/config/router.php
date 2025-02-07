@@ -15,5 +15,6 @@ return [
     'POST' => [
         '/admin/users/create' => ['Back\UserController', 'create'],
         '/admin/users/edit/:id' => ['Back\UserController', 'edit'],
+        '/create' => ['Back\UserController', 'create'],
     ]
 ];

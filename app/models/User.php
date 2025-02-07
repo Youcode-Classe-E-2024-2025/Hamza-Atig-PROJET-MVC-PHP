@@ -1,12 +1,14 @@
 <?php
+namespace App\Models;
 
+use App\Core\Model;
 
 class User extends Model{
     protected $table = "users";
 
     public function createUser($name , $email , $password){
         $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
-        $sql = "INSERT INTO users (name , email , password) VALUES (? , ? , ? )";
+        $sql = "INSERT INTO users (username , email , password) VALUES (? , ? , ? )";
         return $this->query($sql,[$name , $email , $hashedPassword]);
     }
 
